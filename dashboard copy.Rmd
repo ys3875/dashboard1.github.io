@@ -1,7 +1,10 @@
 ---
 title: "Dashboard"
-output:
-  html_document:
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny
 ---
 
 ```{r setup, message = FALSE, echo = FALSE}
@@ -14,10 +17,10 @@ library(flexdashboard)
 ```
 
 ```{r data import, message = FALSE, echo = FALSE}
-cleveland = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
-hungary = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
-long_beach = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
-switzerland = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
+cleveland = read_csv("data/cleveland.csv", na = "?")
+hungary = read_csv("data/cleveland.csv", na = "?")
+long_beach = read_csv("data/cleveland.csv", na = "?")
+switzerland = read_csv("data/cleveland.csv", na = "?")
 
 dfs = list(cleveland, hungary, long_beach, switzerland)
 regions = c("Cleveland", "Hungary", "Long Beach", "Switzerland")
