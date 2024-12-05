@@ -17,10 +17,10 @@ library(flexdashboard)
 ```
 
 ```{r data import, message = FALSE, echo = FALSE}
-cleveland = read_csv("./data/cleveland.csv", na = "?")
-hungary = read_csv("./data/hungarian.csv", na = "?")
-long_beach = read_csv("./data/long_beach_va.csv", na = "?")
-switzerland = read_csv("./data/switzerland.csv", na = "?")
+cleveland = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
+hungary = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
+long_beach = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
+switzerland = read_csv("~/Documents/Data Science I/ds_final/data/cleveland.csv", na = "?")
 
 dfs = list(cleveland, hungary, long_beach, switzerland)
 regions = c("Cleveland", "Hungary", "Long Beach", "Switzerland")
